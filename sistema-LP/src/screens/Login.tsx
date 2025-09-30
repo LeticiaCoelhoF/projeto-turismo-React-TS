@@ -16,11 +16,9 @@ export default function Login({navigation}: any){
             alert('Preencha o email e a senha');
             return;
         }
-
         if(userContext){
             userContext.save(email);
         }
-
         navToHome();
     }
 
@@ -28,7 +26,6 @@ export default function Login({navigation}: any){
         <View style={styleLogin.containerPrincipal}>
             <Image source ={require('../../assets/img/loginBG.png')} style={styleLogin.imagemBG} ></Image>
             <View style={styleLogin.containerLogin}>
-                
                 <Text style={styleLogin.tituloLogin}>Login</Text>
                 <TextInput style={styleLogin.dados} placeholder="Email" value={email} onChangeText={email => setEmail(email)}/>
                 <TextInput style={styleLogin.dados} placeholder="Senha" value={password} onChangeText={password => setPassword(password)} secureTextEntry={true}/>
@@ -36,8 +33,12 @@ export default function Login({navigation}: any){
                 <Pressable onPress={Submit}>
                     <Text style={styleLogin.acessar}>Login</Text>
                 </Pressable>
+
                     <Pressable onPress={Submit}><Text style={styleLogin.semRegistro}>Não tenho registro</Text></Pressable>
             </View>    
+
+           
+
         </View>
     );
 }
