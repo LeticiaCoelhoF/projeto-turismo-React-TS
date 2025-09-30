@@ -8,7 +8,7 @@ export default function Home({navigation}: any){
     return (
         <View>
             <Text>Bem vindo ao sistema</Text>
-        <Pressable onPress={navToCadastro}>
+                <Pressable onPress={navToCadastro}>
             <Text >Cadastro Teste</Text>
         </Pressable>
         </View>

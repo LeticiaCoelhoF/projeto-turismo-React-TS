@@ -1,5 +1,5 @@
-import {View, Text, TextInput, Pressable} from 'react-native';
-// import Login from '../screens/css/Login';
+import {View, Text, TextInput, Pressable, Image} from 'react-native';
+import styleLogin from './css/Login';
 import { useState, useContext } from 'react';
 import { UserContext } from '../context/User';      
 
@@ -16,22 +16,24 @@ export default function Login({navigation}: any){
             alert('Preencha o email e a senha');
             return;
         }
-
         if(userContext){
             userContext.save(email);
         }
-
         navToHome();
     }
 
     return (
-        <View>
-            <TextInput placeholder="Email" value={email} onChangeText={email => setEmail(email)}/>
-            <TextInput placeholder="Senha" value={password} onChangeText={password => setPassword(password)} secureTextEntry={true}/>
-                
-            <Pressable style={{padding: 12, backgroundColor: '#2196F3', marginTop: 16, borderRadius: 8}} onPress={Submit}>
-                <Text>Login</Text>
-            </Pressable>
+        <View style={styleLogin.containerPrincipal}>
+            <Image source ={require('../../assets/img/loginBG.png')} style={styleLogin.imagemBG} ></Image>
+            <View style={styleLogin.containerLogin}>
+                <Text style={styleLogin.tituloLogin}>Login</Text>
+                <TextInput style={styleLogin.dados} placeholder="Email" value={email} onChangeText={email => setEmail(email)}/>
+                <TextInput style={styleLogin.dados} placeholder="Senha" value={password} onChangeText={password => setPassword(password)} secureTextEntry={true}/>
+                    <Pressable onPress={Submit}><Text style={styleLogin.acessar}>Login</Text></Pressable>
+                <Pressable onPress={Submit}>
+                    <Text style={styleLogin.acessar}>Login</Text>
+                </Pressable>
+            </View> 
         </View>
     );
 }
