@@ -1,19 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import { StackRoutes } from "./src/routes/StackRoutes";
+import UserContextProvider from "./src/context/User";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
-    </View>
+      <UserContextProvider>
+        <NavigationContainer>
+          <StackRoutes />
+        </NavigationContainer>
+      </UserContextProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
