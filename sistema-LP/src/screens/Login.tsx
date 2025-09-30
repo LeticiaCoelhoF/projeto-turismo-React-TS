@@ -32,10 +32,11 @@ export default function Login({navigation}: any){
                 <Text style={styleLogin.tituloLogin}>Login</Text>
                 <TextInput style={styleLogin.dados} placeholder="Email" value={email} onChangeText={email => setEmail(email)}/>
                 <TextInput style={styleLogin.dados} placeholder="Senha" value={password} onChangeText={password => setPassword(password)} secureTextEntry={true}/>
-                    <Pressable onPress={Submit}><Text style={styleLogin.acessar}>Login</Text></Pressable>
+                    <Pressable onPress={Submit}><Text style={styleLogin.semSenha}>Esqueceu a senha?</Text></Pressable>
                 <Pressable onPress={Submit}>
                     <Text style={styleLogin.acessar}>Login</Text>
                 </Pressable>
+                    <Pressable onPress={Submit}><Text style={styleLogin.semRegistro}>Não tenho registro</Text></Pressable>
             </View>    
         </View>
     );

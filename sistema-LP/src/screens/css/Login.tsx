@@ -50,8 +50,27 @@ const styleLogin = StyleSheet.create({
         fontFamily:'arial,Inter, sans-serif',
         fontSize:60,
         fontWeight:'bold',
-        marginBottom:40,
+        marginBottom:90,
+        marginTop:-90,
         color:'#FFA91F',
     },
+    semSenha:{
+        color:'#1462D9',
+        marginTop:10,
+        marginBottom:20,
+        marginLeft:130,
+        fontWeight:'semibold',
+        fontFamily:'Arial,Inter, sans-serif',
+        fontSize:19,
+    },
+    semRegistro:{
+        color:'#1462D9',
+        marginTop:40,
+        marginBottom:-40,
+        fontSize:19,
+        fontWeight:'semibold',
+        fontFamily:'Arial,Inter, sans-serif',
+        
+    }
 });
 export default styleLogin;
