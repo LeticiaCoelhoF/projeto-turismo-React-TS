@@ -7,7 +7,7 @@ export function StackRoutes() {
     const {Screen, Navigator} = createStackNavigator();
 
     return (
-        <Navigator>
+        <Navigator screenOptions ={{headerShown: false}}>
             <Screen name="Login" component={Login} />
             <Screen name="Cadastro" component={Cadastro} />
             <Screen name="Home" component={Home} />
