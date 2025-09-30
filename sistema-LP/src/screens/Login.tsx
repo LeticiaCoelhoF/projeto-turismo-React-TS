@@ -30,7 +30,7 @@ export default function Login({navigation}: any){
             <TextInput placeholder="Senha" value={password} onChangeText={password => setPassword(password)} secureTextEntry={true}/>
                 
             <Pressable style={{padding: 12, backgroundColor: '#2196F3', marginTop: 16, borderRadius: 8}} onPress={Submit}>
-                <Text>Acessar</Text>
+                <Text>Login</Text>
             </Pressable>
         </View>
     );
